@@ -24,7 +24,8 @@ public class LoginServlet extends HttpServlet {
         String password = request.getParameter("password");
         User user = UserService.getUser(request.getParameter("emailId"));
         if (user == null) {
-            response.sendRedirect("./index.html");
+            printWriter.print("Please SignUp, before you login");
+            dispatchRequest(request,response,"./signUp.html","include");
         } else if (user.getPassword().equals(password)) {
             request.getSession();
             dispatchRequest(request, response, "./search.html", "forward");

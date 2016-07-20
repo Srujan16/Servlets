@@ -27,7 +27,7 @@ public class SearchFilter implements Filter {
         HttpServletRequest httpServletRequest = (HttpServletRequest) request;
         HttpServletResponse httpServletResponse = (HttpServletResponse) response;
         if (httpServletRequest.getSession(false) == null) {
-            httpServletResponse.sendRedirect("./main.html");
+            httpServletResponse.sendRedirect("./login.html");
         } else {
             chain.doFilter(request, response);
         }
