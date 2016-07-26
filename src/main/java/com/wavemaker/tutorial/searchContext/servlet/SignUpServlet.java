@@ -19,7 +19,7 @@ public class SignUpServlet extends HttpServlet {
 
         response.setContentType("text/html");
         User user = new User(request.getParameter("emailId"),request.getParameter("password"),request.getParameter("username"));
-        if (UserService.inserUser(user) != -1) {
+        if (UserService.insertUser(user) != -1) {
             request.getSession();
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("./search.html");
             requestDispatcher.forward(request, response);
