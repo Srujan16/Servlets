@@ -6,42 +6,37 @@
     </welcome-file-list>
 
     <filter>
-        <filter-name>searchFilter</filter-name>
-        <filter-class>com.wavemaker.tutorial.searchContext.filter.SearchFilter</filter-class>
+        <filter-name>securityFilter</filter-name>
+        <filter-class>com.wavemaker.tutorial.searchContext.filter.SecurityFilter</filter-class>
     </filter>
 
     <filter>
-        <filter-name>loginFilter</filter-name>
-        <filter-class>com.wavemaker.tutorial.searchContext.filter.LoginFilter</filter-class>
+        <filter-name>dashboardFilter</filter-name>
+        <filter-class>com.wavemaker.tutorial.searchContext.filter.DashboardFilter</filter-class>
     </filter>
 
-
-    <filter>
-        <filter-name>signUpFilter</filter-name>
-        <filter-class>com.wavemaker.tutorial.searchContext.filter.SignUpFilter</filter-class>
-    </filter>
 
 
     <filter-mapping>
-        <filter-name>searchFilter</filter-name>
+        <filter-name>securityFilter</filter-name>
         <url-pattern>/search.html</url-pattern>
     </filter-mapping>
 
 
     <filter-mapping>
-        <filter-name>loginFilter</filter-name>
+        <filter-name>dashboardFilter</filter-name>
         <url-pattern>/login.html</url-pattern>
     </filter-mapping>
 
 
     <filter-mapping>
-        <filter-name>loginFilter</filter-name>
+        <filter-name>dashboardFilter</filter-name>
         <url-pattern>/login</url-pattern>
     </filter-mapping>
 
 
     <filter-mapping>
-        <filter-name>signUpFilter</filter-name>
+        <filter-name>dashboardFilter</filter-name>
         <url-pattern>/signUp.html</url-pattern>
     </filter-mapping>
 
