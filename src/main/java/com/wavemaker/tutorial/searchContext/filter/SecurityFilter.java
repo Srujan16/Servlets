@@ -15,7 +15,7 @@ import java.util.HashMap;
 /**
  * Created by srujant on 18/7/16.
  */
-public class SearchFilter implements Filter {
+public class SecurityFilter implements Filter {
 
 
     @Override
