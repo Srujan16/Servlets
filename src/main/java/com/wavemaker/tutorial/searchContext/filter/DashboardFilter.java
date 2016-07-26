@@ -13,7 +13,7 @@ import java.io.IOException;
 /**
  * Created by srujant on 18/7/16.
  */
-public class LoginFilter implements Filter {
+public class DashboardFilter implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
     }
