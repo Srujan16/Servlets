@@ -21,7 +21,7 @@ import java.util.*;
 
 public class TextEditor extends HttpServlet {
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException {
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException {
         response.setContentType("text/html");
         PrintWriter printWriter = null;
         Map<File, List<SearchResult>> result = null;
@@ -49,7 +49,6 @@ public class TextEditor extends HttpServlet {
                     printWriter.print("<p>" + searchContext.getSearchPattern() + " not  found in file " + currentFile.getName() + "</p>");
                 }
             }
-            request.getSession(false).invalidate();
             printWriter.print("</body></html>");
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
